@@ -54,8 +54,12 @@ function getsigninfo() {
   url.headers['User-Agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1'
 
   chavy.get(url, (error, response, data) => {
-    let title = `${cookieName}`
-    let subTitle = `今日已领取强国低保。`
+    //let title = `${cookieName}`
+    var int1 = data.indexOf('totalScore":')+12
+    var int2 = data.indexOf(',"taskProgress":[{"displayRuleId":')
+    var int3 = data.slice(int1,int2)
+    let title = `强国低保`
+    let subTitle = `您已领取强国低保，今日学习积分：${int3}。`
     let detail = ``
     let result = data.indexOf('"每日首次登录积1分。","currentScore":1')
     if (result == -1) subTitle = `未完成强国低保！`
