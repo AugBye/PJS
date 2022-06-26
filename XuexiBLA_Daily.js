@@ -55,10 +55,9 @@ function getsigninfo() {
 
   chavy.get(url, (error, response, data) => {
     let title = `${cookieName}`
-    let subTitle = `签到结果: 成功 (重复签到)`
+    let subTitle = `签到结果: 成功 (重复签到)，说明: ${result.data}`
     let detail = ``
     let result = JSON.parse(data)
-    if (result && result.code == 0) detail = `说明: ${result.data}`
 //    if (result && result.code == 0) detail = `本月累计: ${result.data.hadSignDays}/${result.data.allDays}次, 说明: ${result.data.text}`
     chavy.msg(title, subTitle, detail)
     chavy.done()
