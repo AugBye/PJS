@@ -55,10 +55,10 @@ function getsigninfo() {
 
   chavy.get(url, (error, response, data) => {
     let title = `${cookieName}`
-    let subTitle = `签到结果: 成功 (重复签到)，说明: ${result.data}`
+    let subTitle = `今日已领取强国低保。`
     let detail = ``
-    let result = JSON.parse(data)
-//    if (result && result.code == 0) detail = `本月累计: ${result.data.hadSignDays}/${result.data.allDays}次, 说明: ${result.data.text}`
+    let result = data.indexOf('"每日首次登录积1分。","currentScore":1')
+    if (result == -1) subTitle = `未完成强国低保！`
     chavy.msg(title, subTitle, detail)
     chavy.done()
   })
