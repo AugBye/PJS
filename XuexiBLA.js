@@ -1,12 +1,11 @@
 /*
-百度贴吧签到，增加重试机制，减少签到失败的情况。
-脚本为串行执行，通过设定batchSize的值<int>，实现每批多少个贴吧并行签到一次。
+学习强国每日低保
 */
 const scirptName = "强国低保";
 const batchSize = 20;
 const retries = 2; // 签到失败重试次数
 const interval = 2000; // 每次重试间隔
-const tiebaCookieKey = "tieba_checkin_cookie";
+const tiebaCookieKey = "xuexi_cookie";
 const tiebeGetCookieRegex = /https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login/;
 const tiebeNewVersionGetCookieRegex = /https:?\/\/pc\.xuexi\.cn\/points\/mystudy.html/;
 let magicJS = MagicJS(scirptName, "INFO");
