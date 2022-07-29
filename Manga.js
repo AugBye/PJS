@@ -90,7 +90,7 @@ function GetCookie() {
           if (!cookie) {
             $.msg("更新" + CookieName + "Cookie失败‼️", "", "");
           } else {
-            $.msg("更新" + CookieName + "Cookie成功 🎉", "", "");
+            #$.msg("更新" + CookieName + "Cookie成功 🎉", "", "");
           }
         }
       } else {
