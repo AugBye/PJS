@@ -89,9 +89,7 @@ function GetCookie() {
           var cookie = $.setdata(CookieValue, CookieKey);
           if (!cookie) {
             $.msg("更新" + CookieName + "Cookie失败‼️", "", "");
-          } else {
-            #$.msg("更新" + CookieName + "Cookie成功 🎉", "", "");
-          }
+          } 
         }
       } else {
         var cookie = $.setdata(CookieValue, CookieKey);
