@@ -4,7 +4,7 @@ const chavy = init()
 const cookieVal = $request.headers['Cookie']
 if (cookieVal) {
   if (chavy.setdata(cookieVal, cookieKey)) {
-    chavy.msg(`${cookieName}`, '获取Cookie: 成功', '')
+    #chavy.msg(`${cookieName}`, '获取Cookie: 成功', '')
     chavy.log(`[${cookieName}] 获取Cookie: 成功, cookie: ${cookieVal}`)
   }
 }
