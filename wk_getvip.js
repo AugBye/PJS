@@ -33,9 +33,11 @@ const myRequest = {
 
 $task.fetch(myRequest).then(response => {
     console.log(response.statusCode + "\n\n" + response.body);
+    console.notify(response.statusCode + "\n\n" + response.body);
     $done();
 }, reason => {
     console.log(reason.error);
+    console.notify(reason.error);
     $done();
 });
 function init() {
